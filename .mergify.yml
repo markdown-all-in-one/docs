@@ -1,0 +1,38 @@
+pull_request_rules:
+  - name: Automatic squash merge when approved
+    conditions:
+      - "#approved-reviews-by>=1"
+      - "#changes-requested-reviews-by=0"
+    actions:
+      merge:
+        strict: "smart"
+        method: squash
+        commit_message: "title+body"
+
+  - name: Add label `Category-Decision`
+    conditions:
+      - "files~=(?i)^docs/decisions"
+    actions:
+      label:
+        add: ["Category-Decision"]
+
+  - name: Add label `Category-ProjectManagement`
+    conditions:
+      - "files~=(?i)^docs/project-management"
+    actions:
+      label:
+        add: ["Category-ProjectManagement"]
+
+  - name: Add label `Category-Spec`
+    conditions:
+      - "files~=(?i)^docs/specs"
+    actions:
+      label:
+        add: ["Category-Spec"]
+
+  - name: Assign the author because it is a draft PR
+    conditions:
+      - "draft"
+    actions:
+      assign:
+        users: ["{{author}}"]

@@ -1,0 +1,43 @@
+{
+    "editor.formatOnSave": true,
+    "editor.renderControlCharacters": true,
+    "files.encoding": "utf8",
+    "files.eol": "\n",
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "html.format.wrapLineLength": 0,
+    "markdown.extension.italic.indicator": "*",
+    "markdown.extension.toc.unorderedList.marker": "-",
+    "markdownlint.config": {
+        "MD003": {
+            "style": "atx"
+        },
+        "MD013": false,
+        "MD033": {
+            "allowed_elements": [
+                "del",
+                "img",
+                "ins",
+                "kbd",
+                "details",
+                "summary"
+            ]
+        },
+        "MD035": {
+            "style": "---"
+        }
+    },
+    "cSpell.words": [
+        "Alipay",
+        "Emojipedia",
+        "GitLab",
+        "Gitea",
+        "KaTeX",
+        "VSIX",
+        "downcase",
+        "gitmoji",
+        "goldmark",
+        "strikethrough",
+        "uncheck"
+    ]
+}

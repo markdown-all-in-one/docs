@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"alefragnani.bookmarks",
+		"davidanson.vscode-markdownlint",
+		"editorconfig.editorconfig",
+		"idleberg.emoji-code",
+		"streetsidesoftware.code-spell-checker",
+		"yzhang.markdown-all-in-one"
+	]
+}

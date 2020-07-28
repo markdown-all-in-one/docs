@@ -1,0 +1,29 @@
+{
+    "name": "vscode-markdown-docs",
+    "version": "0.1.0",
+    "description": "Documentation for Markdown All in One",
+    "main": "index.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "docs:dev": "vuepress dev docs",
+        "docs:build": "vuepress build docs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Lemmingh/vscode-markdown-docs.git"
+    },
+    "keywords": [
+        "documentation"
+    ],
+    "author": "Lemmingh",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Lemmingh/vscode-markdown-docs/issues"
+    },
+    "homepage": "https://github.com/Lemmingh/vscode-markdown-docs#readme",
+    "devDependencies": {
+        "vuepress": "^1.5.2"
+    }
+}

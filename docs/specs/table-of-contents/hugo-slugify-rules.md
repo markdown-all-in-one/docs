@@ -2,6 +2,8 @@
 title: 'Slugify rules for Hugo'
 ---
 
+# {{ $frontmatter.title }}
+
 Hugo has been using [goldmark](https://github.com/yuin/goldmark) since v0.60.0 released on 2019-11-27.
 
 Hugo allows to set ID auto-generation method by `autoHeadingIDType` since v0.62.2 released on 2020-01-05.

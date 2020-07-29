@@ -1,0 +1,20 @@
+# Configuration for Stale - https://github.com/probot/stale
+
+# Do not close automatically.
+daysUntilClose: false
+
+staleLabel: "Needs-Feedback"
+
+issues:
+  daysUntilStale: 90
+  markComment: >
+    **This thread has not had any activity for 90 days.**
+    If it is no longer an issue, please close it.
+    Thank you for your contributions.
+
+pulls:
+  daysUntilStale: 7
+  markComment: >
+    **This pull request has not had any activity for 7 days.**
+    If you are still working on it, please come back.
+    Thank you for your contributions.

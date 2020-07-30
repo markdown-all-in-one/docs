@@ -24,6 +24,7 @@
     },
     "homepage": "https://github.com/Lemmingh/vscode-markdown-docs#readme",
     "devDependencies": {
-        "vuepress": "^1.5.2"
+        "vuepress": "^1.5.2",
+        "vuepress-plugin-seo": "^0.1.4"
     }
 }

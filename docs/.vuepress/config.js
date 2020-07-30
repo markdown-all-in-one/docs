@@ -10,5 +10,10 @@ module.exports = {
             { text: 'Install', link: 'https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one' }
         ],
         sidebar: 'auto'
-    }
+    },
+    plugins: [
+        ['vuepress-plugin-seo', {
+            url: (_page, _site, path) => 'https://lemmingh.github.io/vscode-markdown-docs' + path
+        }]
+    ]
 }

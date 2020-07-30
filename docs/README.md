@@ -1,3 +1,5 @@
-# Markdown All in One Documentation
+---
+home: true
+---
 
 🚧 WIP

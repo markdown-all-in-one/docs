@@ -1,0 +1,65 @@
+name: "Publish"
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: ["publish-website"]
+  release:
+    types: ["published"]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Log trigger info"
+        shell: bash
+        run: |
+          echo "Actor: $GITHUB_ACTOR"
+          echo "Event: $GITHUB_EVENT_NAME"
+          echo
+          echo "Commit: $GITHUB_SHA"
+          echo "Branch: $GITHUB_REF"
+
+      - name: "Setup Node.js environment"
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+
+      - name: "Checkout branch: ${{ github.ref }}"
+        uses: actions/checkout@v2
+        with:
+          path: "master"
+
+      - name: "Checkout branch: gh-pages"
+        uses: actions/checkout@v2
+        with:
+          ref: "gh-pages"
+          path: "deploy"
+
+      - name: "Install Node.js dependencies"
+        shell: bash
+        working-directory: "./master"
+        run: npm ci
+
+      - name: "Build website"
+        shell: bash
+        working-directory: "./master"
+        run: "npm run docs:build"
+
+      - name: "Deploy website"
+        shell: pwsh
+        env:
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: "./master"
+        run: |
+          Write-Output "::add-mask::$env:PERSONAL_ACCESS_TOKEN"
+          Write-Output "::debug::ExecutionPolicy: $(Get-ExecutionPolicy)"
+          . './tools/deploy.ps1'
+
+      - name: "[debug]Upload npm log"
+        if: ${{ !success() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: "npm-debug-log"
+          path: "~/.npm/_logs"

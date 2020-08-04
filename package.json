@@ -1,7 +1,7 @@
 {
     "name": "vscode-markdown-docs",
     "version": "0.1.0",
-    "description": "Documentation for Markdown All in One",
+    "description": "Markdown All in One Documentation",
     "main": "index.js",
     "directories": {
         "doc": "docs"

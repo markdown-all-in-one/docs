@@ -9,6 +9,13 @@ pull_request_rules:
         method: squash
         commit_message: "title+body"
 
+  - name: Add label `PR-Invalid` when abandoned
+    conditions:
+      - "closed"
+    actions:
+      label:
+        add: ["PR-Invalid"]
+
   - name: Add label `Category-Decision`
     conditions:
       - "files~=(?i)^docs/decisions"
@@ -16,12 +23,12 @@ pull_request_rules:
       label:
         add: ["Category-Decision"]
 
-  - name: Add label `Category-ProjectManagement`
+  - name: Add label `Category-Management`
     conditions:
       - "files~=(?i)^docs/project-management"
     actions:
       label:
-        add: ["Category-ProjectManagement"]
+        add: ["Category-Management"]
 
   - name: Add label `Category-Spec`
     conditions:
@@ -30,9 +37,24 @@ pull_request_rules:
       label:
         add: ["Category-Spec"]
 
+  - name: Add label `Category-User`
+    conditions:
+      - "files~=(?i)^docs/guide"
+    actions:
+      label:
+        add: ["Category-User"]
+
   - name: Assign the author because it is a draft PR
     conditions:
       - "draft"
+    actions:
+      assign:
+        users: ["{{author}}"]
+
+  - name: Assign the author because it needs feedback
+    conditions:
+      - "label=Needs-Feedback"
+      - "-draft"
     actions:
       assign:
         users: ["{{author}}"]

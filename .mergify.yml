@@ -9,12 +9,12 @@ pull_request_rules:
         method: squash
         commit_message: "title+body"
 
-  - name: Add label `PR-Invalid` when abandoned
+  - name: Add label `Resolution-Invalid` when abandoned
     conditions:
       - "closed"
     actions:
       label:
-        add: ["PR-Invalid"]
+        add: ["Resolution-Invalid"]
 
   - name: Add label `Category-Decision`
     conditions:

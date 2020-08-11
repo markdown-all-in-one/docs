@@ -61,7 +61,7 @@ function Invoke-DebugCommand ([string]$Title, [scriptblock]$Command)
 {
     if ($Global:isGithubDebug -or [bool]$env:RUNNER_DEBUG)
     {
-        Write-Output "::group::[debug]$Title"
+        Write-Output "::group::(debug) $Title"
         & $Command
         Write-Output '::endgroup::'
     }
@@ -96,10 +96,21 @@ Invoke-DebugCommand -Title 'Remaining entries' -Command {
 }
 
 . $InvokeTaskGroup -Title 'Copy files to the destination' -Command {
-    Copy-Item -Path "$Source/*" -Destination $Destination -Recurse -PassThru | Where-Object { $_ -is [System.IO.FileInfo] }
+    (Copy-Item -Path "$Source/*" -Destination $Destination -Recurse -PassThru | Where-Object { $_ -is [System.IO.FileInfo] })
 }
+# Two weird behaviors which cannot be reproduced on my machine (Ubuntu 18.04.4 LTS; PowerShell 7.0.1):
+#
 # If `FileInfo` and `DirectoryInfo` were mixed together, `Format-List` seemed to be called. I don't know why.
-# ? Should we install `tree` to list contents?
+#
+# The output of "Copy files" and Git operations mixed together.
+# My conjecture:
+# PowerShell doesn't wait to complete the output, but executes the next command.
+# It's fine since cmdlets queue up to send output to the pipeline.
+# However, Git is an external program that has no knowledge of pipeline,
+# so it directly writes to the output stream immediately, resulting in chaos.
+# Thus, we have to force PowerShell to wait, or force Git to join the queue.
+#
+# ? Should we install `tree` to list contents? Probably no need.
 
 # ! Security concern: Mask everything potential in workflow file before debugging!
 Invoke-DebugCommand -Title 'Git configuration' -Command {

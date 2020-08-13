@@ -1,3 +1,3 @@
-# Project Management
+# Project management
 
 Conventions and maintainers' behavior.

@@ -9,11 +9,15 @@ This extension leverages VS Code's built-in [`vscode.markdown-language-features`
 Commands:
 
 * `markdown.showPreview`
+  * <https://github.com/microsoft/vscode/blob/7ee9aa4757212dd513e7cf4b9b67426401e64695/extensions/markdown-language-features/src/commands/showPreview.ts#L53-L69>
 * `markdown.showPreviewToSide`
+  * <https://github.com/microsoft/vscode/blob/7ee9aa4757212dd513e7cf4b9b67426401e64695/extensions/markdown-language-features/src/commands/showPreview.ts#L71-L85>
 
 Contexts:
 
 * `markdownPreviewFocus`
+  * <https://github.com/microsoft/vscode/blob/fdf23dc5f95f4a17b246dbebc9af14dab5043334/extensions/markdown-language-features/src/features/previewManager.ts#L57>
+  * <https://github.com/microsoft/vscode/blob/fdf23dc5f95f4a17b246dbebc9af14dab5043334/extensions/markdown-language-features/src/features/previewManager.ts#L235-L237>
 
 ## Markdown preview
 

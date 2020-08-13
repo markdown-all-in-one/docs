@@ -2,6 +2,8 @@
 title: 'Markdown syntax and flavors'
 ---
 
+## Overview
+
 There are a great number of Markdown flavors (also known as "dialect"). Some of them diverge significantly and are technically incompatible.
 
 **Markdown All in One** focuses on **CommonMark** and **GitHub Flavored Markdown** (GFM), plus a few extensions urgently needed by the community.

@@ -2,6 +2,8 @@
 title: 'Slugify rules for Gitea'
 ---
 
+## Overview
+
 Gitea has been using [goldmark](https://github.com/yuin/goldmark) with their own slugify method since version 1.11 released on 2020-02-10.
 
 ## References

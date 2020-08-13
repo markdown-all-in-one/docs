@@ -2,7 +2,7 @@
 title: 'Slugify rules for Hugo'
 ---
 
-# {{ $frontmatter.title }}
+## Overview
 
 Hugo has been using [goldmark](https://github.com/yuin/goldmark) since v0.60.0 released on 2019-11-27.
 

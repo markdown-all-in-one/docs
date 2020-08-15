@@ -57,7 +57,7 @@ jobs:
           Write-Output "::debug::ExecutionPolicy: $(Get-ExecutionPolicy)"
           . './tools/deploy.ps1'
 
-      - name: "[debug]Upload npm log"
+      - name: "(debug) Upload npm log"
         if: ${{ !success() }}
         uses: actions/upload-artifact@v2
         with:

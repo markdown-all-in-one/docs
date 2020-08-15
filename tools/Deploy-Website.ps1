@@ -96,7 +96,7 @@ Invoke-DebugCommand -Title 'Remaining entries' -Command {
 }
 
 . $InvokeTaskGroup -Title 'Copy files to the destination' -Command {
-    (Copy-Item -Path "$Source/*" -Destination $Destination -Recurse -PassThru | Where-Object { $_ -is [System.IO.FileInfo] })
+    Format-Table -AutoSize -Wrap -InputObject $(Copy-Item -Path "$Source/*" -Destination $Destination -Recurse -PassThru | Where-Object { $_ -is [System.IO.FileInfo] })
 }
 # Two weird behaviors which cannot be reproduced on my machine (Ubuntu 18.04.4 LTS; PowerShell 7.0.1):
 #

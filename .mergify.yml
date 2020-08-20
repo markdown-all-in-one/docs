@@ -12,6 +12,7 @@ pull_request_rules:
   - name: Add label `Resolution-Invalid` when abandoned
     conditions:
       - "closed"
+      - "-merged"
     actions:
       label:
         add: ["Resolution-Invalid"]

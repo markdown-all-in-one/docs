@@ -5,22 +5,22 @@ title: 'Labels (docs repository)'
 | Label                   | Color     |
 | ----------------------- | --------- |
 | Category-Decision       | `#000000` |
-| Category-Management     | `#a2eeef` |
-| Category-Spec           | `#0075ca` |
-| Category-User           | `#c5def5` |
+| Category-Management     | `#adffff` |
+| Category-Spec           | `#006666` |
+| Category-User           | `#00ffff` |
 | dependencies            | `#0366d6` |
-| help wanted             | `#008672` |
+| help wanted             | `#e6e600` |
 | Issue-Bug               | `#d73a4a` |
-| Issue-Feature           | `#7057ff` |
-| Issue-Question          | `#F385FF` |
-| Needs-Attention         | `#E6E600` |
+| Issue-Feature           | `#5319e7` |
+| Issue-Question          | `#ca00e0` |
+| Needs-Attention         | `#ffff00` |
 | Needs-Feedback          | `#737300` |
-| Needs-Translation       | `#006b75` |
+| Needs-Translation       | `#f2c6b0` |
 | Needs-Triage            | `#0052cc` |
 | PR-AutoMerge            | `#10ff10` |
 | Resolution-Answered     | `#CCFFCC` |
 | Resolution-Duplicate    | `#cfd3d7` |
-| Resolution-FixCommitted | `#84ffb3` |
+| Resolution-FixCommitted | `#85ff85` |
 | Resolution-Invalid      | `#cfd3d7` |
 | Resolution-Released     | `#007300` |
 | Resolution-Wontfix      | `#ffffff` |
@@ -61,6 +61,8 @@ Indicates which part of the documentation the issue or PR belongs to.
 
 Only applies to threads with `Scope-Docs` label.
 
+The hue of these labels is 180.
+
 * `Category-Decision`: Decisions on what should or should not be implemented, or general guidelines.
 * `Category-Management`: Conventions and maintainers' behavior.
 * `Category-Spec`: Specifications of features.
@@ -76,11 +78,15 @@ Extra attention is needed. Looking for help.
 
 This is a special label recognized by GitHub. Do not change its name.
 
+In theory, it should be called `Needs-Help`.
+
 ## `Issue-*`
 
 Indicates the type of an issue.
 
 Only applies to issues.
+
+These labels have distinct colors, so that they can be told from each other at a glance.
 
 * `Issue-Bug`: Something isn't working.
 * `Issue-Feature`: New feature requests, or enhancement of existing features.
@@ -89,6 +95,8 @@ Only applies to issues.
 ## `Needs-*`
 
 Indicates that the thread needs a specific type of response.
+
+Except `Translation` and `Triage`, the hue of these labels is 60.
 
 * `Needs-Attention`: Highest priority. Look at this as soon as possible.
 * `Needs-Feedback`: The original author of the issue or PR needs to come back and respond to something.
@@ -107,6 +115,8 @@ Reserved for future use.
 Indicates the final state of an issue or PR.
 
 `Resolution-Duplicate` and `Resolution-Invalid` apply to both issues and PRs. Others only apply to issues.
+
+Except `Duplicate` and `Invalid`, the hue of these labels is 120.
 
 * `Resolution-Answered`: Discussion closed.
   * Add this label when an issue with `Issue-Question` label is closed.

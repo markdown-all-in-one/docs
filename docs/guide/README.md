@@ -1,5 +1,6 @@
 ---
 title: 'User guide'
+sidebarDepth: 2
 ---
 
 Welcome!

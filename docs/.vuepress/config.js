@@ -15,6 +15,6 @@ module.exports = {
             { text: 'Management', link: '/project-management/' },
             { text: 'Install', link: 'https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one' }
         ],
-        sidebar: 'auto'
+        sidebar: require('./sidebar')
     }
 }

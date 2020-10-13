@@ -20,6 +20,7 @@ title: 'Labels (docs repository)'
 | PR-AutoMerge            | `#10ff10` |
 | Resolution-Answered     | `#CCFFCC` |
 | Resolution-Duplicate    | `#cfd3d7` |
+| Resolution-External     | `#ffffff` |
 | Resolution-FixCommitted | `#85ff85` |
 | Resolution-Invalid      | `#cfd3d7` |
 | Resolution-Released     | `#007300` |
@@ -121,13 +122,15 @@ Except `Duplicate` and `Invalid`, the hue of these labels is 120.
 * `Resolution-Answered`: Discussion closed.
   * Add this label when an issue with `Issue-Question` label is closed.
 * `Resolution-Duplicate`: This issue or pull request already exists.
+* `Resolution-External`: Outside of our control/codebase. Usually related to an upstream component.
 * `Resolution-FixCommitted`: Fix is checked in, but it might be a few weeks until a release.
   * Add this label when an issue is fixed but not released.
   * Remove this label when the fix is published to the documentation website.
 * `Resolution-Invalid`: This does not seem right, or contain any valid or useful information. It's discarded.
+  * Includes those that cannot be reproduced.
 * `Resolution-Released`: It's generally available.
   * Add this label when the fix is published to the documentation website.
-* `Resolution-Wontfix`: This will not be worked on. Because it's by design, or outside of our control.
+* `Resolution-Wontfix`: This will not be worked on. Because it's by design.
 
 ## `Scope-*`
 

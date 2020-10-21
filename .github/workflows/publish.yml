@@ -37,15 +37,26 @@ jobs:
           ref: "gh-pages"
           path: "deploy"
 
+      - name: "Cache Node.js packages"
+        id: "cache"
+        uses: actions/cache@v2
+        with:
+          # npm cache files are stored in `~/.npm` on Linux.
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('master/**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: "Install Node.js dependencies"
         shell: bash
         working-directory: "./master"
         run: npm ci
 
       - name: "Build website"
-        shell: bash
+        shell: pwsh
         working-directory: "./master"
-        run: "npm run docs:build"
+        run: |
+          . './tools/build.ps1'
 
       - name: "Deploy website"
         shell: pwsh
@@ -54,9 +65,18 @@ jobs:
         working-directory: "./master"
         run: |
           Write-Output "::add-mask::$env:PERSONAL_ACCESS_TOKEN"
-          Write-Output "::debug::ExecutionPolicy: $(Get-ExecutionPolicy)"
           . './tools/deploy.ps1'
 
+      # Keep the cache clean.
+      # This is regarded as a post-run step that we don't really pay attention to.
+      # Run it last to save waiting time.
+      - name: "Verify npm cache"
+        if: ${{ steps.cache.outputs.cache-hit != 'true' }}
+        shell: bash
+        run: |
+          npm cache verify
+
+      # If the run failed, npm log may help to diagnose.
       - name: "(debug) Upload npm log"
         if: ${{ !success() }}
         uses: actions/upload-artifact@v2

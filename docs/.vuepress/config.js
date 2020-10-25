@@ -8,13 +8,7 @@ module.exports = {
         docsBranch: 'draft',
         docsDir: 'docs',
         editLinks: true,
-        nav: [
-            { text: 'Guide', link: '/guide/' },
-            { text: 'Decisions', link: '/decisions/' },
-            { text: 'Specifications', link: '/specs/' },
-            { text: 'Management', link: '/project-management/' },
-            { text: 'Install', link: 'https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one' }
-        ],
+        nav: require('./nav'),
         sidebar: require('./sidebar')
     }
-}
+};

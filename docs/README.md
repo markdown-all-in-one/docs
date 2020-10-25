@@ -9,19 +9,19 @@ actionLink: '/guide/'
 
 🚧 WIP
 
-<!-- BeginRegion: Markdown Slots -->
+<!-- #region: Markdown Slots -->
 
 ::: slot marketplace
 [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/yzhang.markdown-all-in-one?label=Visual%20Studio%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 :::
 
 ::: slot devBuild
-[![CI](https://github.com/yzhang-gh/vscode-markdown/workflows/CI/badge.svg?event=push)](https://github.com/yzhang-gh/vscode-markdown/actions?query=event%3Apush+is%3Asuccess)
+[![CI](https://github.com/yzhang-gh/vscode-markdown/workflows/CI/badge.svg?event=push)](https://github.com/yzhang-gh/vscode-markdown/actions?query=workflow%3ACI+event%3Apush+is%3Asuccess)
 :::
 
-<!-- EndRegion: Markdown Slots -->
+<!-- #endregion: Markdown Slots -->
 
-<!-- BeginRegion: Download -->
+<!-- #region: Download -->
 
 <!-- markdownlint-disable MD033 -->
 
@@ -38,7 +38,7 @@ actionLink: '/guide/'
 
 <!-- markdownlint-enable MD033 -->
 
-<!-- EndRegion: Download -->
+<!-- #endregion: Download -->
 
 ## Advanced topics
 

@@ -15,7 +15,7 @@ module.exports = {
         // Sort by attention.
         '',
         'key-binding',
-        //// 'performance',
+        'performance',
     ],
     '/project-management/docs/': [
         // The `README` here is just a cover. Don't show it in sidebar.

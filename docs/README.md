@@ -48,7 +48,9 @@ Understand goals of this project at [Decisions](/decisions/).
 
 ### Contributors
 
-Find details of features at [Specifications](/specs/).
+Find your way to participate at [Contributing guide](/contributing/).
+
+Get details of features at [Specifications](/specs/).
 
 ### Core maintainers
 

@@ -4,7 +4,7 @@ sidebar: false
 
 # Project management
 
-Conventions and maintainers' behavior.
+Operation conventions and maintainers' behavior.
 
 [**Go for main repository**](/project-management/main/)
 

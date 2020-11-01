@@ -1,9 +1,28 @@
 'use strict';
 
 // The most `README` here are just covers. Don't show them in sidebar. Exceptions:
+// * '/contributing/'
 // * '/guide/'
 
 module.exports = {
+    '/contributing/': [
+        // Sort by attention.
+        '',
+        'issue',
+        'code-style',
+        'emoji',
+        'optimization',
+        'packaging',
+        'test',
+        'textmate-language-grammar',
+        'word-choice',
+        {
+            title: 'Documentation',
+            children: [
+                'writing-style-guide',
+            ]
+        },
+    ],
     '/decisions/': [
         // Sort by attention.
         'markdown-syntax-and-flavors',
@@ -12,7 +31,6 @@ module.exports = {
         'key-binding',
         'syntax-highlighting-for-fenced-code-blocks',
         'localization',
-        'word-choice',
     ],
     '/guide/': [
         // Sort by attention.
@@ -24,7 +42,6 @@ module.exports = {
         // Sort in alphabetical order.
         'labels',
         'life-cycle',
-        'writing-style-guide',
     ],
     '/project-management/main/': [
         // Sort in alphabetical order.
@@ -34,14 +51,10 @@ module.exports = {
                 'automation/ci',
             ]
         },
-        'code-style',
-        'emoji',
         'issue',
         'labels',
         'life-cycle',
-        'packaging',
         'repository-organization',
-        'test',
     ],
     '/specs/': [
         // Sort in alphabetical order.

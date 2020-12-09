@@ -12,5 +12,6 @@ module.exports = [
             { text: 'Docs', link: '/project-management/docs/' },
         ]
     },
+    { text: 'Blog', link: '/blog/' },
     { text: 'Install', link: 'https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one' },
 ];

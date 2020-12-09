@@ -7,7 +7,7 @@ Welcome!
 
 We are looking forward to shaping the product together with you.
 
-This article focuses on development. Please refer to [Reporting an issue](./issue.md) for communication guidelines.
+This article focuses on development. Please refer to [Creating an issue](./issue.md) for communication guidelines.
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/yzhang-gh/vscode-markdown)
 

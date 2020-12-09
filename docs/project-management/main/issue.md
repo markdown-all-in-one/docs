@@ -1,5 +1,6 @@
 ---
 title: 'Issue management (main repository)'
+sidebarDepth: 2
 ---
 
 <!-- markdownlint-disable-file MD040 -->

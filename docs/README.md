@@ -44,11 +44,11 @@ actionLink: '/guide/'
 
 ### Everyone
 
-Understand goals of this project at [Decisions](/decisions/).
-
-### Contributors
+Understand the goals of this project at [Decisions](/decisions/).
 
 Find your way to participate at [Contributing guide](/contributing/).
+
+### Contributors
 
 Get details of features at [Specifications](/specs/).
 

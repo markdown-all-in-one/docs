@@ -5,16 +5,22 @@
 // * '/guide/'
 
 module.exports = {
+    '/blog/': [
+        // Recently updated first.
+        'toggle-preview',
+    ],
     '/contributing/': [
         // Sort by attention.
         '',
         'issue',
+        'performance-issue',
         'code-style',
         'emoji',
         'optimization',
         'packaging',
         'test',
         'textmate-language-grammar',
+        'localization',
         'word-choice',
         {
             title: 'Documentation',
@@ -30,13 +36,11 @@ module.exports = {
         'math-support',
         'key-binding',
         'syntax-highlighting-for-fenced-code-blocks',
-        'localization',
     ],
     '/guide/': [
         // Sort by attention.
         '',
         'key-binding',
-        'performance',
     ],
     '/project-management/docs/': [
         // Sort in alphabetical order.

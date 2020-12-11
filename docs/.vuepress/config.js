@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Markdown All in One Documentation',
-    //// description: 'Markdown All in One Documentation',
     base: '/vscode-markdown-docs/',
+    evergreen: true,
     themeConfig: {
         repo: 'yzhang-gh/vscode-markdown',
         docsRepo: 'Lemmingh/vscode-markdown-docs',

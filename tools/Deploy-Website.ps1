@@ -22,13 +22,13 @@ param (
     $Sha = $env:GITHUB_SHA,
 
     [datetime]
-    [ValidateScript( { $_.Kind -eq [System.DateTimeKind]::Utc })]
+    [ValidateScript( { [System.DateTimeKind]::Utc -eq $_.Kind })]
     $BuildTimeUtc = [datetime]::UtcNow
 )
 
 <# Check environment. #>
 
-if ($env:GITHUB_ACTIONS -ne 'true')
+if ('true' -ne $env:GITHUB_ACTIONS)
 {
     Write-Warning 'This script is designed to run on GitHub Actions.'
 }
@@ -42,38 +42,13 @@ if (-not $IsLinux)
 
 [string]$Timestamp = $BuildTimeUtc.ToString('o')
 
-$InvokeTaskGroup = {
-    param (
-        [string]$Title,
-        [scriptblock]$Command
-    )
+Set-Variable -Name @('Timestamp') -Option ReadOnly
 
-    Write-Output "::group::$Title"
-    . $Command # I don't want to create too deeply nested scopes.
-    Write-Output '::endgroup::'
-}
-
-Set-Variable -Name @('Timestamp', 'InvokeTaskGroup') -Option ReadOnly
-
-$Global:isGithubDebug = [bool]$env:RUNNER_DEBUG
-
-function Invoke-DebugCommand ([string]$Title, [scriptblock]$Command)
-{
-    if ($Global:isGithubDebug -or [bool]$env:RUNNER_DEBUG)
-    {
-        Write-Output "::group::(debug) $Title"
-        & $Command
-        Write-Output '::endgroup::'
-    }
-}
-
-# Note:
-# `$InvokeTaskGroup` is designed to run commands in the same scope as caller. Please dot sourcing it.
-# Function `Invoke-DebugCommand` is designed to run debug-purpose commands in a child scope to minimize effects on caller.
+Import-Module -Name "$PSScriptRoot/util.psm1"
 
 <# Main. #>
 
-. $InvokeTaskGroup -Title 'Arguments' -Command {
+Invoke-TaskCommand -Title 'Arguments' -Command {
     Get-Variable -Name @('Source', 'Destination', 'Sha', 'Timestamp') | Format-Table -AutoSize -Wrap # `Timestamp` is clearer than `$BuildTimeUtc.ToString()`.
 }
 
@@ -86,7 +61,7 @@ Invoke-DebugCommand -Title 'Pre-Run: Empty the destination' -Command {
     Remove-Item -Path "$Destination/*" -Exclude @('.git*', '.nojekyll') -Recurse -WhatIf
 }
 
-. $InvokeTaskGroup -Title 'Empty the destination' -Command {
+Invoke-TaskCommand -Title 'Empty the destination' -Command {
     Remove-Item -Path "$Destination/*" -Exclude @('.git*', '.nojekyll') -Recurse -ErrorAction:Continue
 }
 
@@ -95,22 +70,22 @@ Invoke-DebugCommand -Title 'Remaining entries' -Command {
     ls -l -A
 }
 
-. $InvokeTaskGroup -Title 'Copy files to the destination' -Command {
-    Format-Table -AutoSize -Wrap -InputObject $(Copy-Item -Path "$Source/*" -Destination $Destination -Recurse -PassThru | Where-Object { $_ -is [System.IO.FileInfo] })
+# I only care about which files have been copied. Thus, printing their full paths is enough.
+#
+# However, if you are going to log more info,
+# remember to explicitly call `Format-Table`, or whatever output formatting method you need at the end of the pipeline.
+# Otherwise, unexpected formatter may be called. (See "about_Format.ps1xml" on Microsoft Docs)
+# And the output of this and the following Git operations may mix together.
+# I also observed these weird behaviors in other scenarios on GitHub Actions.
+# My conjecture about output mixing is:
+# Cmdlets queue up to send output to the pipeline.
+# PowerShell on CI doesn't wait to complete the formatting, but executes the next command.
+# However, external programs have no knowledge of pipeline, and directly write to the output stream immediately.
+# Thus, they race, resulting in chaos.
+# Thus, we have to force PowerShell to wait by calling a formatter.
+Invoke-TaskCommand -Title 'Copy files to the destination' -Command {
+    Copy-Item -Path "$Source/*" -Destination $Destination -Recurse -PassThru | Where-Object { $_ -is [System.IO.FileInfo] } | ForEach-Object { $_.FullName }
 }
-# Two weird behaviors which cannot be reproduced on my machine (Ubuntu 18.04.4 LTS; PowerShell 7.0.1):
-#
-# If `FileInfo` and `DirectoryInfo` were mixed together, `Format-List` seemed to be called. I don't know why.
-#
-# The output of "Copy files" and Git operations mixed together.
-# My conjecture:
-# PowerShell doesn't wait to complete the output, but executes the next command.
-# It's fine since cmdlets queue up to send output to the pipeline.
-# However, Git is an external program that has no knowledge of pipeline,
-# so it directly writes to the output stream immediately, resulting in chaos.
-# Thus, we have to force PowerShell to wait, or force Git to join the queue.
-#
-# ? Should we install `tree` to list contents? Probably no need.
 
 # ! Security concern: Mask everything potential in workflow file before debugging!
 Invoke-DebugCommand -Title 'Git configuration' -Command {
@@ -120,7 +95,7 @@ Invoke-DebugCommand -Title 'Git configuration' -Command {
     git remote -v
 }
 
-. $InvokeTaskGroup -Title 'Push to remote repository' -Command {
+Invoke-TaskCommand -Title 'Push to remote repository' -Command {
     # Use the default config of the repository.
     # This script should work with <https://github.com/marketplace/actions/checkout>.
 

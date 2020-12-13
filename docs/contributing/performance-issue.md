@@ -6,11 +6,17 @@ title: 'Reporting a performance issue'
 
 It can be frustrating to find the editor unresponsive. But most of the time, it is not our extension but the [complex interaction between VS Code extensions](https://github.com/microsoft/vscode/wiki/Explain-extension-causes-high-cpu-load) that causes the problem.
 
-Therefore, **please do a quick check**:
+Therefore, **please do a quick check** as described below.
 
 ::: tip
 To run a command, open [**Command Palette**](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) (<kbd>Ctrl / ⌘</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>).
 :::
+
+### Recommended
+
+As of [VS Code version 1.52](https://code.visualstudio.com/updates/v1_52#_troubleshooting-extension-bisect), run VS Code command "**Start Extension Bisect**". It then guides you.
+
+### Traditional
 
 1. Open a workspace, where you can reproduce the issue.
 2. Run VS Code command "**Duplicate Workspace in New Window**" to temporarily create a copy for test.

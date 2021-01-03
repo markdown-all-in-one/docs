@@ -1,6 +1,12 @@
 name: "Publish"
 
 on:
+  push:
+    branches:
+      - "draft"
+      - "master"
+    paths:
+      - "docs/**"
   workflow_dispatch:
   repository_dispatch:
     types: ["publish-website"]

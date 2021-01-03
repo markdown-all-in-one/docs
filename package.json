@@ -8,14 +8,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Lemmingh/vscode-markdown-docs.git"
+        "url": "git+https://github.com/markdown-all-in-one/docs.git"
     },
     "author": "Lemmingh (https://github.com/Lemmingh)",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Lemmingh/vscode-markdown-docs/issues"
+        "url": "https://github.com/markdown-all-in-one/docs/issues"
     },
-    "homepage": "https://github.com/Lemmingh/vscode-markdown-docs#readme",
+    "homepage": "https://github.com/markdown-all-in-one/docs",
     "devDependencies": {
         "vuepress": "^1.5.3"
     }

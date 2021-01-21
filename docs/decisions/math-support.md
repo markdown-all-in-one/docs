@@ -1,6 +1,4 @@
----
-title: 'Math support'
----
+# Math support
 
 ## Overview
 

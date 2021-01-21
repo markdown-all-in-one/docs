@@ -1,6 +1,4 @@
----
-title: 'Slugify rules for Gitea'
----
+# Slugify rules for Gitea
 
 ## Overview
 

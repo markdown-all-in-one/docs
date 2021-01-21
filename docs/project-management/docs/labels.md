@@ -1,6 +1,4 @@
----
-title: 'Labels (docs repository)'
----
+# Labels (docs repository)
 
 | Label                   | Color     |
 | ----------------------- | --------- |

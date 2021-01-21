@@ -1,6 +1,4 @@
----
-title: 'Markdown syntax and flavors'
----
+# Markdown syntax and flavors
 
 ## Overview
 

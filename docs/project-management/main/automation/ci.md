@@ -1,6 +1,4 @@
----
-title: 'Continuous integration'
----
+# Continuous integration
 
 ## Overview
 

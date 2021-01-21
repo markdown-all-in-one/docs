@@ -1,6 +1,4 @@
----
-title: 'Creating an issue'
----
+# Creating an issue
 
 ## Introduction
 

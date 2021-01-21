@@ -1,6 +1,4 @@
----
-title: 'Slugify rules for Hugo'
----
+# Slugify rules for Hugo
 
 ## Overview
 

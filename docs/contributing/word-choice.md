@@ -1,6 +1,4 @@
----
-title: 'Word choice'
----
+# Word choice
 
 ## Overview
 

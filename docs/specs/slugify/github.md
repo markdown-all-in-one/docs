@@ -1,6 +1,4 @@
----
-title: 'Slugify rules for GitHub'
----
+# Slugify rules for GitHub
 
 ## References
 

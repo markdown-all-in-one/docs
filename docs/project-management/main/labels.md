@@ -1,9 +1,4 @@
----
-title: 'Labels (main repository)'
----
-
-| Label | Color |
-| ----- | ----- |
+# Labels (main repository)
 
 ## Terminology
 

@@ -1,7 +1,8 @@
 ---
-title: 'User guide'
 sidebarDepth: 2
 ---
+
+# User guide
 
 Welcome!
 

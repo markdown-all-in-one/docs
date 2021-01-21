@@ -1,6 +1,4 @@
----
-title: 'Slugify rules for Visual Studio Code'
----
+# Slugify rules for Visual Studio Code
 
 ## References
 

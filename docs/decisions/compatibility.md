@@ -1,6 +1,4 @@
----
-title: 'Compatibility'
----
+# Compatibility
 
 ## Dependency on `vscode.markdown-language-features`
 

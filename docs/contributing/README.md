@@ -1,7 +1,8 @@
 ---
-title: 'Contributing guide'
 sidebarDepth: 2
 ---
+
+# Contributing guide
 
 Welcome!
 

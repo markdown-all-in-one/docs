@@ -1,6 +1,4 @@
----
-title: 'Markdown preview'
----
+# Markdown preview
 
 ## Overview
 

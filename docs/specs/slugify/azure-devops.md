@@ -1,6 +1,4 @@
----
-title: 'Slugify rules for Azure DevOps'
----
+# Slugify rules for Azure DevOps
 
 ## Overview
 

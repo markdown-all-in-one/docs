@@ -1,6 +1,4 @@
----
-title: 'Reporting a performance issue'
----
+# Reporting a performance issue
 
 ## Before proceeding
 

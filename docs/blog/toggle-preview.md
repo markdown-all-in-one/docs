@@ -1,6 +1,4 @@
----
-title: 'Toggle preview'
----
+# Toggle preview
 
 ## Announcement
 

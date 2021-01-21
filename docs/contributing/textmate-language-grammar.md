@@ -1,6 +1,4 @@
----
-title: 'TextMate grammar guide'
----
+# TextMate grammar guide
 
 ## Introduction
 

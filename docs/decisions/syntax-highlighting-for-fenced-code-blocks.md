@@ -1,6 +1,4 @@
----
-title: 'Syntax highlighting for fenced code blocks'
----
+# Syntax highlighting for fenced code blocks
 
 ## In editor
 

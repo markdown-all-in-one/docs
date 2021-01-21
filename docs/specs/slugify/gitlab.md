@@ -1,8 +1,7 @@
----
-title: 'Slugify rules for GitLab'
----
+# Slugify rules for GitLab
+
+See comments in our code.
 
 ## References
 
-* <https://gitlab.com/gitlab-org/gitlab/blob/b434ca4f27a0c4e3eed2c087a8d1902a09418790/lib/gitlab/utils/markdown.rb#L8-16>
-* <https://gitlab.com/gitlab-org/gitlab/blob/b2173f6eb822fbc09f0a6b649551bb10c49090ec/app/assets/javascripts/lib/utils/text_utility.js#L49-60>
+* <https://gitlab.com/gitlab-org/gitlab/blob/a8c5858ce940decf1d263b59b39df58f89910faf/lib/gitlab/utils/markdown.rb>

@@ -1,6 +1,4 @@
----
-title: 'Key binding'
----
+# Key binding
 
 ## Overview
 

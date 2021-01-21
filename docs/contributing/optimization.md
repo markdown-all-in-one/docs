@@ -1,6 +1,4 @@
----
-title: 'Optimization tricks'
----
+# Optimization tricks
 
 ## Compilation performance
 

@@ -1,6 +1,4 @@
----
-title: 'Writing style guide'
----
+# Writing style guide
 
 Talk like a human being.
 

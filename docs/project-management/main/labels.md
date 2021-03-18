@@ -1,4 +1,4 @@
-# Labels (main repository)
+# Labels (Main)
 
 ## Terminology
 

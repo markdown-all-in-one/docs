@@ -1,1 +1,4 @@
+# https://vuepress2.netlify.app/reference/config.html#directory-config
+.cache
+.temp
 dist

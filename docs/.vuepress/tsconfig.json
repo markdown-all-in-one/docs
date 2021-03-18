@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "target": "ES2019",
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "strict": true
+    }
+}

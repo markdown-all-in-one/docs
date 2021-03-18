@@ -1,8 +1,4 @@
----
-sidebarDepth: 2
----
-
-# Issue management (main repository)
+# Issue management (Main)
 
 <!-- markdownlint-disable-file MD040 -->
 

@@ -1,25 +1,17 @@
 ---
 home: true
 tagline: null
-actionText: 'Get Started'
-actionLink: '/guide/'
+actions:
+  - text: 'Get Started'
+    link: '/guide/'
+  - text: 'Report Issues'
+    link: '/contributing/issue.html'
+    type: 'secondary'
 ---
 
 <!-- markdownlint-disable-file MD041 -->
 
 🚧 WIP
-
-<!-- #region: Markdown Slots -->
-
-::: slot marketplace
-[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/yzhang.markdown-all-in-one?label=Visual%20Studio%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-:::
-
-::: slot devBuild
-[![CI](https://github.com/yzhang-gh/vscode-markdown/workflows/CI/badge.svg?event=push)](https://github.com/yzhang-gh/vscode-markdown/actions?query=workflow%3ACI+event%3Apush+is%3Asuccess)
-:::
-
-<!-- #endregion: Markdown Slots -->
 
 <!-- #region: Download -->
 
@@ -28,11 +20,15 @@ actionLink: '/guide/'
 <div class="features">
   <div class="feature">
     <h2>Install Stable</h2>
-    <Content slot-key="marketplace"/>
+
+[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/yzhang.markdown-all-in-one?label=Visual%20Studio%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+
   </div>
   <div class="feature">
     <h2>Latest Dev Build</h2>
-    <Content slot-key="devBuild"/>
+
+[![CI](https://github.com/yzhang-gh/vscode-markdown/workflows/CI/badge.svg?event=push)](https://github.com/yzhang-gh/vscode-markdown/actions?query=workflow%3ACI+event%3Apush+is%3Asuccess)
+
   </div>
 </div>
 
@@ -44,14 +40,14 @@ actionLink: '/guide/'
 
 ### Everyone
 
-Understand the goals of this project at [Decisions](/decisions/).
+Understand the goals of this project at [Decisions](./decisions/README.md).
 
-Find your way to participate at [Contributing guide](/contributing/).
+Find your way to participate at [Contributing guide](./contributing/README.md).
 
 ### Contributors
 
-Get details of features at [Specifications](/specs/).
+Get details of features at [Specifications](./specs/README.md).
 
 ### Core maintainers
 
-Learn conventions at [Project management](/project-management/).
+Learn conventions at [Project management](./project-management/README.md).

@@ -1,6 +1,6 @@
-# Continuous integration
+# Automation (Main)
 
-## Overview
+## Continuous integration
 
 We now run 2 workflows on [GitHub Actions](https://github.com/features/actions).
 

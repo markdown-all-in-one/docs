@@ -2,12 +2,14 @@
 
 ## Overview
 
+Our product is bundled by webpack, then packaged by vsce.
+
 We build two kinds of VSIX packages on CI:
 
 * Production: Optimized by webpack. Only contains indispensable files. Ready for deployment.
 * Debug: No optimization. Built by webpack in `development` mode. Intended for debugging and profiling.
 
-In practice, they only differ in optimization level, and we just change the `vscode:prepublish` command when building:
+In practice, they only differ in optimization level. We just change the `NODE_ENV` environment variable, then our build script will set the actual build command accordingly:
 
 * Production: `webpack --mode production`
 * Debug: `webpack --mode development`
@@ -29,7 +31,7 @@ First find what to check in step 1 and 2. Then determine what are required in st
    * In `package.json`, files under `contributes.markdown.*` are always needed.
 4. Examine others manually:
    * Read the bundle analysis reports generated during step 2 carefully.
-   * When in doubt, search in the JavaScript file.
+   * When in doubt, search in the bundle (JavaScript file).
    * Remember to check modules contributed by `extendMarkdownIt()`.
    * Remember to check resource files that our code dynamically loads.
 

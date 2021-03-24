@@ -57,8 +57,14 @@ export const Sidebar_Config: SidebarConfigObject = {
 
     "/guide/": [
         // Sort by attention.
-        "/guide/README.md",
-        "/guide/key-binding.md",
+        {
+            isGroup: true,
+            text: "User guide",
+            children: [
+                "/guide/README.md", //
+                "/guide/key-binding.md",
+            ],
+        },
     ],
 
     "/project-management/": [

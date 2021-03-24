@@ -2,7 +2,7 @@
 
 ## Before proceeding
 
-It can be frustrating to find the editor unresponsive. But most of the time, it is not our extension but the [complex interaction between VS Code extensions](https://github.com/microsoft/vscode/wiki/Explain-extension-causes-high-cpu-load) that causes the problem.
+It can be frustrating to find the editor unresponsive. But most of the time, it is not our product but the [complex interaction between VS Code extensions](https://github.com/microsoft/vscode/wiki/Explain-extension-causes-high-cpu-load) that causes the problem.
 
 Therefore, **please do a quick check** as described below.
 
@@ -18,6 +18,7 @@ As of [VS Code version 1.52](https://code.visualstudio.com/updates/v1_52#_troubl
 
 1. Open a workspace, where you can reproduce the issue.
 2. Run VS Code command "**Duplicate Workspace in New Window**" to temporarily create a copy for test.
+
    ::: danger
    This step is strongly recommended. Otherwise, you might have a hard time in resetting environment.
 
@@ -27,6 +28,7 @@ As of [VS Code version 1.52](https://code.visualstudio.com/updates/v1_52#_troubl
    2. Find the subfolder that holds your workspace storage.
    3. Delete corresponding `state.vscdb` files. Or, if you have a SQLite 3 database editor, you can try to modify them.
    :::
+
 3. Run VS Code command "**Disable All Installed Extensions for this Workspace**".
 4. Run VS Code command "**Reload Window**".
 5. See if you can reproduce the issue.

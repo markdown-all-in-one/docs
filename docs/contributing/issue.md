@@ -2,13 +2,17 @@
 
 ## Introduction
 
-It can be frustrating to find a problem. It can be exciting to come up with a new idea.
+<!-- It can be frustrating to find a problem. It can be exciting to come up with a new idea. -->
 
-However, please calm down and [**fill out our issue template**](https://github.com/yzhang-gh/vscode-markdown/issues/new/choose) first. It ensures effective and efficient communication.
+Please calm down and search for existing issues before filing a new one. It would be best to also take a look at the closed ones.
+
+Then, [**fill out our issue template**](https://github.com/yzhang-gh/vscode-markdown/issues/new/choose), if you believe you encountered something new. It ensures effective and efficient communication.
 
 This article demonstrates some common cases.
 
-If you experienced a performance regression, please also check [Reporting a performance issue](./performance-issue.md).
+Please follow the issue template and [Collecting diagnostic data](./diagnostic-data.md) to collect relevant information.
+
+If you experienced a performance regression, such as lag and unresponsiveness, please also check [Reporting a performance issue](./performance-issue.md).
 
 ## Reporting unexpected behavior
 
@@ -23,15 +27,20 @@ If you experienced a performance regression, please also check [Reporting a perf
 > 1. Open a Markdown document.
 > 2. Run command "**Markdown All in One: Print current document to HTML**".
 >
+> **Configuration**
+>
+> Default.
+>
 > **Environment**
 >
-> * Extensions
->   * Markdown All in One: 3.3.0
->   * Markdown Notes: 0.0.20
+> * Markdown All in One: 3.3.0
+> * Markdown Notes: 0.0.20
 > * VS Code: 1.50.0 (system setup)
 > * OS: Windows 10 Pro, Version 1909, Build 18363.1139, 64-bit
 >
-> **Error message in the console**
+> **Diagnostic data**
+>
+> Error message:
 >
 > ...
 

@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # Contributing guide
 
 Welcome!
@@ -19,14 +15,14 @@ It is *strongly recommended* to always use the latest.
 You will need all the following:
 
 * [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) 12
+* [Node.js 12](https://nodejs.org/dist/latest-v12.x/) (includes npm 6)
 * [Visual Studio Code Insiders](https://code.visualstudio.com/insiders/), or [Visual Studio Code](https://code.visualstudio.com/)
 
 It is recommended to also have these tools:
 
 * A Git GUI client
 * [PowerShell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell) 7 or higher
-* [Python](https://www.python.org/downloads/) 3.6 or higher
+* [Python](https://www.python.org/downloads/) 3.8 or higher
 
 If you are going to build VSIX packages, install [vsce](https://www.npmjs.com/package/vsce):
 
@@ -43,3 +39,5 @@ npm ci
 ```
 
 This should get you the same Node.js dependencies as in the production environment.
+
+If you are going to update dependencies, please refer to [Dependency management](./dependency-management.md).

@@ -20,6 +20,7 @@ export const Sidebar_Config: SidebarConfigObject = {
             children: [
                 "/contributing/issue.md", // This comment stops Prettier.
                 "/contributing/performance-issue.md",
+                "/contributing/diagnostic-data.md",
             ],
         },
         {
@@ -29,11 +30,13 @@ export const Sidebar_Config: SidebarConfigObject = {
                 "/contributing/README.md",
                 "/contributing/code-style.md",
                 "/contributing/emoji.md",
+                "/contributing/commit-message.md",
                 "/contributing/optimization.md",
                 "/contributing/packaging.md",
                 "/contributing/test.md",
                 "/contributing/textmate-language-grammar.md",
                 "/contributing/localization.md",
+                // "/contributing/dependency-management.md",
             ],
         },
         {
@@ -119,7 +122,7 @@ export const Sidebar_Config: SidebarConfigObject = {
             isGroup: true,
             text: "List editing",
             children: [
-                "/specs/list-editing/list-continuation.md",
+                "/specs/list-editing/list-continuation.md", //
                 "/specs/list-editing/list-toggling.md",
             ],
         },
@@ -156,7 +159,7 @@ export const Sidebar_Config: SidebarConfigObject = {
             isGroup: true,
             text: "Table of contents",
             children: [
-                "/specs/table-of-contents/toc-detection.md",
+                "/specs/table-of-contents/toc-detection.md", //
                 "/specs/table-of-contents/toc-generation.md",
             ],
         },

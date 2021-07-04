@@ -36,21 +36,19 @@ Typically, for a repository that hosts a product, the content is the source of t
 
 ### Meta
 
-| Code    | Emoji     | Meaning             |
-| ------- | --------- | ------------------- |
-| U+1F477 | &#128119; | Infrastructure      |
-| U+2705  | &#9989;   | Test case           |
-| U+2B06  | &#11014;  | Update dependencies |
-| U+1F527 | &#128295; | Configuration       |
-| U+1F4DD | &#128221; | Documentation       |
+| Code    | Emoji     | Meaning        |
+| ------- | --------- | -------------- |
+| U+1F477 | &#128119; | Infrastructure |
+| U+2705  | &#9989;   | Test case      |
+| U+1F527 | &#128295; | Configuration  |
+| U+1F4DD | &#128221; | Documentation  |
 
-Other parts of a repository are meta (the content about the repository itself).
+Other parts of a repository are meta (the things about the repository itself).
 
 The concrete definition depends on your project.
 
 * Infrastructure: Change build system, test system, and CI/CD configuration files.
 * Test case: Change test cases only.
-* Update dependencies: Update dependencies only.
 * Configuration: Change miscellaneous configuration files, such as gitignore, editorconfig, and housekeeping bot configuration.
 * Documentation: Change documentation only. The documentation here usually consists of repository README, license, contributing guide, code of conduct, and issue templates.
 
@@ -79,7 +77,6 @@ The "exact match" ensures that a change won't be captured by its superset accide
 1. &#128293;
 1. &#128119;
 1. &#9989;
-1. &#11014;
 1. &#128295;
 1. &#128221;
 
@@ -94,7 +91,6 @@ People who are accustomed to Conventional Commits may find this section helpful.
 | &#127959; | refactor  |
 | &#128119; | build, ci |
 | &#9989;   | test      |
-| &#11014;  | build     |
 | &#128295; | chore     |
 | &#128221; | docs      |
 
@@ -138,7 +134,9 @@ For three-way merge, you can try 🔀 (U+1F500, Twisted Rightwards Arrows).
 
 ### Why no "release"
 
-Preferences vary so greatly that we cannot figure out a popular emoji for "release". We leave the choice to project maintainers.
+Preferences vary so greatly that we cannot figure out a popular emoji for "release".
+
+We leave the choice to project maintainers.
 
 ### Why no "revert"
 
@@ -161,9 +159,13 @@ It damaged user data that is not in the default location.
 
 Note that the above example only reverts single commit. In very rare cases, you need to revert multiple commits at once. Remember to summarize the commits concisely.
 
+We leave the choice to project maintainers.
+
 ### Why no "internationalization and localization"
 
 [Internationalization and localization](https://en.wikipedia.org/wiki/Internationalization_and_localization) is more of a scope, which is described in Conventional Commits, than an action. Besides, whether and how to do it depends on your project.
+
+We leave the choice to project maintainers.
 
 This also applies to "accessibility", "assets", "comments", "literals", "user experience", etc.
 

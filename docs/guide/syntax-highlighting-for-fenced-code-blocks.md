@@ -18,7 +18,7 @@ After tokenization, themes come to assign colors and styles to the document.
 
 It's powered by [highlight.js](https://github.com/highlightjs/highlight.js).
 
-Syntax highlighting in preview uses the one bundled with VS Code's built-in `vscode.markdown-language-features` extension. In exporting to HTML, it uses the one shipped with this extension.
+Syntax highlighting in preview uses the one bundled with VS Code's built-in `vscode.markdown-language-features` extension. In exporting to HTML, it uses the one shipped with this product.
 
 ## References
 

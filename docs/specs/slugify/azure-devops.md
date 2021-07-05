@@ -30,4 +30,4 @@ Azure DevOps generates anchors for headings only based on the heading content, t
 * [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986)
 * [MD024 - Multiple headings with the same content | markdownlint](https://github.com/DavidAnson/markdownlint/blob/v0.21.0/doc/Rules.md#md024)
 * [ATX headings | CommonMark Spec 0.29](https://spec.commonmark.org/0.29/#atx-headings)
-* [Markdown syntax and flavors](../../decisions/markdown-syntax-and-flavors.md)
+* [Markdown syntax and flavors](../../guide/markdown-syntax-and-flavors.md)

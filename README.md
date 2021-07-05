@@ -5,20 +5,6 @@
 
 The repository hosts [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) Documentation.
 
-## Organization
-
-### `docs/decisions`
-
-Decisions on what should or should not be implemented, or general guidelines.
-
-### `docs/project-management`
-
-Conventions and maintainers' behavior.
-
-### `docs/specs`
-
-Specifications of features, describing the current design.
-
 ## License
 
 Copyright (c) Markdown All in One Documentation contributors

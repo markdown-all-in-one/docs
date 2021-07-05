@@ -56,14 +56,14 @@ Please learn about [VS Code's built-in Markdown features](https://code.visualstu
 
 ## Syntax support
 
-See [Markdown syntax and flavors](../decisions/markdown-syntax-and-flavors.md) for details.
+See [Markdown syntax and flavors](./markdown-syntax-and-flavors.md) for details.
 
 * CommonMark
 * GitHub Flavored Markdown
 * LaTeX math (powered by KaTeX)
 * YAML front matter
 
-Looking for other syntax? Markdown All in One is known to be [compatible with many other extensions](../decisions/compatibility.md). The following have been tested:
+Looking for other syntax? Markdown All in One is known to be [compatible with many other extensions](./compatibility.md). The following have been tested:
 
 * [Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)
 * [Markdown Emoji](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-emoji)
@@ -73,4 +73,4 @@ Looking for other syntax? Markdown All in One is known to be [compatible with ma
 
 ## Keyboard shortcuts
 
-See [Key binding cheat sheet](key-binding.md) for details.
+See [Key binding](./key-binding.md) for details.

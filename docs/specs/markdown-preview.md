@@ -2,7 +2,7 @@
 
 ## Overview
 
-This extension heavily relies on VS Code's built-in Markdown preview. See [Compatibility](../decisions/compatibility.md) for details.
+This product heavily relies on VS Code's built-in Markdown preview. See [Compatibility](../guide/compatibility.md) for details.
 
 ## Details
 

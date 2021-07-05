@@ -40,14 +40,12 @@ actions:
 
 ### Everyone
 
-Understand the goals of this project at [Decisions](./decisions/README.md).
-
 Find your way to participate at [Contributing guide](./contributing/README.md).
 
 ### Contributors
 
 Get details of features at [Specifications](./specs/README.md).
 
-### Core maintainers
+### Maintainers
 
 Learn conventions at [Project management](./project-management/README.md).

@@ -49,15 +49,6 @@ export const Sidebar_Config: SidebarConfigObject = {
         },
     ],
 
-    "/decisions/": [
-        // Sort by attention.
-        "/decisions/markdown-syntax-and-flavors.md",
-        "/decisions/compatibility.md",
-        "/decisions/math-support.md",
-        "/decisions/key-binding.md",
-        "/decisions/syntax-highlighting-for-fenced-code-blocks.md",
-    ],
-
     "/guide/": [
         // Sort by attention.
         {
@@ -65,7 +56,11 @@ export const Sidebar_Config: SidebarConfigObject = {
             text: "User guide",
             children: [
                 "/guide/README.md", //
+                "/guide/markdown-syntax-and-flavors.md",
                 "/guide/key-binding.md",
+                "/guide/math.md",
+                "/guide/compatibility.md",
+                "/guide/syntax-highlighting-for-fenced-code-blocks.md",
             ],
         },
     ],

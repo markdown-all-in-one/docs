@@ -15,7 +15,6 @@ export const Sidebar_Config: SidebarConfigObject = {
     "/contributing/": [
         // Sort by attention.
         {
-            isGroup: true,
             text: "Reporting issues",
             children: [
                 "/contributing/issue.md", // This comment stops Prettier.
@@ -24,7 +23,6 @@ export const Sidebar_Config: SidebarConfigObject = {
             ],
         },
         {
-            isGroup: true,
             text: "Development",
             children: [
                 "/contributing/README.md",
@@ -40,7 +38,6 @@ export const Sidebar_Config: SidebarConfigObject = {
             ],
         },
         {
-            isGroup: true,
             text: "Documentation",
             children: [
                 "/contributing/word-choice.md",
@@ -52,7 +49,6 @@ export const Sidebar_Config: SidebarConfigObject = {
     "/guide/": [
         // Sort by attention.
         {
-            isGroup: true,
             text: "User guide",
             children: [
                 "/guide/README.md", //
@@ -68,7 +64,6 @@ export const Sidebar_Config: SidebarConfigObject = {
     "/project-management/": [
         // Sort by attention.
         {
-            isGroup: true,
             text: "Main repository",
             children: [
                 // Sort in alphabetical order.
@@ -80,7 +75,6 @@ export const Sidebar_Config: SidebarConfigObject = {
             ],
         },
         {
-            isGroup: true,
             text: "Docs repository",
             children: [
                 // Sort in alphabetical order.
@@ -93,28 +87,24 @@ export const Sidebar_Config: SidebarConfigObject = {
     "/specs/": [
         // Sort in alphabetical order.
         {
-            isGroup: true,
             text: "Code completion",
             children: [
                 "/specs/code-completion.md", //
             ],
         },
         {
-            isGroup: true,
             text: "Editor theming",
             children: [
                 "/specs/editor-theming/editor-decoration.md", //
             ],
         },
         {
-            isGroup: true,
             text: "Exporting",
             children: [
                 "/specs/exporting/html.md", //
             ],
         },
         {
-            isGroup: true,
             text: "List editing",
             children: [
                 "/specs/list-editing/list-continuation.md", //
@@ -122,14 +112,12 @@ export const Sidebar_Config: SidebarConfigObject = {
             ],
         },
         {
-            isGroup: true,
             text: "Markdown table",
             children: [
                 "/specs/markdown-table/table-formatting.md", //
             ],
         },
         {
-            isGroup: true,
             text: "Math",
             children: [
                 "/specs/math/definitions-of-math-areas.md",
@@ -138,7 +126,6 @@ export const Sidebar_Config: SidebarConfigObject = {
             ],
         },
         {
-            isGroup: true,
             text: "Slugify",
             children: [
                 "/specs/slugify/azure-devops.md",
@@ -151,7 +138,6 @@ export const Sidebar_Config: SidebarConfigObject = {
             ],
         },
         {
-            isGroup: true,
             text: "Table of contents",
             children: [
                 "/specs/table-of-contents/toc-detection.md", //

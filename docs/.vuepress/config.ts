@@ -7,8 +7,6 @@ export default defineUserConfig<DefaultThemeOptions>({
     base: "/docs/",
     title: "Markdown All in One Documentation",
 
-    evergreen: true,
-
     themeConfig: {
         repo: "yzhang-gh/vscode-markdown",
         docsRepo: "markdown-all-in-one/docs",

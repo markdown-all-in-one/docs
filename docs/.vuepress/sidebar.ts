@@ -55,6 +55,7 @@ export const Sidebar_Config: SidebarConfigObject = {
                 "/guide/markdown-syntax-and-flavors.md",
                 "/guide/key-binding.md",
                 "/guide/math.md",
+                "/guide/exporting.md",
                 "/guide/compatibility.md",
                 "/guide/syntax-highlighting-for-fenced-code-blocks.md",
             ],

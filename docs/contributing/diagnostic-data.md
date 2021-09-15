@@ -100,3 +100,9 @@ Follow [VS Code's guide](https://github.com/microsoft/vscode/wiki/Performance-Is
 You will finally produce a file whose name ends with `.cpuprofile.txt`
 
 Attach it to the "**Diagnostic data**" section.
+
+## Syntax highlighting metadata
+
+Follow [VS Code's guide](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#scope-inspector).
+
+When taking screenshots, remember to include the whole scope inspector widget. It would be nice to also attach its text content as a code block.

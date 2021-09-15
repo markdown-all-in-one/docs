@@ -64,6 +64,8 @@ Workaround:
 
 Disable VS Code extensions you don't need until the editor works again.
 
+Occasionally, removing some key bindings can mitigate the problem. See the "Non-keyboard IME" section.
+
 Explanation:
 
 Some markdown-it plugins use algorithms with very high [time complexity](https://en.wikipedia.org/wiki/Time_complexity). If multiple VS Code extensions depend on such things, the VS Code extension host may take tens of thousands of milliseconds, because it is single-threaded. Our product loads every markdown-it plugin [contributed to VS Code's built-in Markdown preview][vscode-markdown-extension-guide], which may double the time.

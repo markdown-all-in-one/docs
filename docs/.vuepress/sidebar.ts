@@ -26,7 +26,6 @@ export const Sidebar_Config: SidebarConfigObject = {
             text: "Development",
             children: [
                 "/contributing/README.md",
-                "/contributing/code-style.md",
                 "/contributing/emoji.md",
                 "/contributing/commit-message.md",
                 "/contributing/optimization.md",
@@ -35,6 +34,13 @@ export const Sidebar_Config: SidebarConfigObject = {
                 "/contributing/textmate-language-grammar.md",
                 "/contributing/localization.md",
                 // "/contributing/dependency-management.md",
+            ],
+        },
+        {
+            text: "Code style",
+            children: [
+                "/contributing/code-style/file.md", //
+                "/contributing/code-style/typescript.md",
             ],
         },
         {
@@ -48,15 +54,30 @@ export const Sidebar_Config: SidebarConfigObject = {
 
     "/guide/": [
         // Sort by attention.
+        "/guide/README.md", //
         {
-            text: "User guide",
+            text: "Features",
             children: [
-                "/guide/README.md", //
-                "/guide/markdown-syntax-and-flavors.md",
-                "/guide/key-binding.md",
+                "/guide/list.md", //
+                "/guide/table-of-contents.md", //
+                "/guide/table.md",
                 "/guide/math.md",
                 "/guide/exporting.md",
+            ],
+        },
+        {
+            text: "References",
+            children: [
+                // Sort in alphabetical order.
                 "/guide/compatibility.md",
+                "/guide/key-binding.md",
+                "/guide/markdown-syntax-and-flavors.md",
+            ],
+        },
+        {
+            text: "Appendix",
+            children: [
+                // Sort in alphabetical order.
                 "/guide/syntax-highlighting-for-fenced-code-blocks.md",
             ],
         },

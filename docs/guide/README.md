@@ -10,14 +10,19 @@ Please learn about [VS Code's built-in Markdown features](https://code.visualstu
 
 ### Basic editing
 
-* Toggle bold, italic, strikethrough, task list item, etc.
-* Paste link on selected text.
+* Toggle bold, italic, strikethrough, etc.
+
+* Auto continuation for block quote.
 
 ### List editing
 
 * Auto continuation on `Enter`.
-* Auto determine indentation size according to CommonMark Spec.
+
+* Adaptive indentation size according to the CommonMark Spec.
+
 * Increase and decrease level by `Tab` and `Backspace`.
+
+* Toggle task list item.
 
 ### GitHub Flavored Markdown
 
@@ -27,10 +32,13 @@ Please learn about [VS Code's built-in Markdown features](https://code.visualstu
 
 ### Table of contents
 
-* Implement as Markdown list.
+* Implemented as Markdown list without extended syntax.
+
 * Create by one command, "**Create Table of Contents**".
+
 * Automatically update on file saving.
-* Control slug style (GitHub, GitLab and more) with the `slugifyMode` setting.
+
+* Control heading ID style with the `slugifyMode` setting: VS Code, GitHub, GitLab, and more.
 
 ### Exporting Markdown to HTML
 
@@ -40,19 +48,29 @@ Please learn about [VS Code's built-in Markdown features](https://code.visualstu
 
 ### Math
 
-* Support pandoc-style LaTeX math.
+* The pandoc-style LaTeX math.
 
-### Auto completion
+* Syntax highlighting in editor powered by TextMate grammar.
 
-* Images and links to workspace resources (files).
-* Links to headings.
+* Rendering in preview powered by KaTeX.
+
+* Code completion for LaTeX commands.
+
+### Link processing
+
+* Paste URL over selection to create link.
+
+Auto completion for links to:
+
+* Images and other workspace resources (files).
+
+* Headings.
+
 * Reference links.
-* LaTeX commands.
 
 ### Others
 
-* Contribute a few "Close preview" key bindings to VS Code's built-in Markdown preview, so that you can close the preview using the same shortcut as "Open Preview".
-* Auto continue block quote.
+* A few "Close preview" key bindings to VS Code's built-in Markdown preview, enabling you to close the preview using the same shortcut as "**Open Preview**".
 
 ## Syntax support
 

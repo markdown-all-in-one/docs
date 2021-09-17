@@ -22,6 +22,8 @@
 
 [#969]: https://github.com/yzhang-gh/vscode-markdown/issues/969
 
+[#985]: https://github.com/yzhang-gh/vscode-markdown/issues/985
+
 [#993]: https://github.com/yzhang-gh/vscode-markdown/issues/993
 
 [#995]: https://github.com/yzhang-gh/vscode-markdown/issues/995
@@ -217,6 +219,20 @@ If you're still using it, disable it at the `markdown.extension.preview.autoShow
 Explanation:
 
 The feature is almost discarded. We nowadays can hardly hack [VS Code's built-in Markdown preview][vscode-markdown-feature-introduction].
+
+## Incompatibility
+
+<!-- We regard these cases as "out of scope". We do not think it is our fault. -->
+
+**Markdown All in One** is not guaranteed to work with Markdown flavors which diverge from CommonMark greatly, or things which customize markdown-it deeply.
+
+The following cases have been identified.
+
+* [Docs Authoring Pack (`docsmsft.docs-authoring-pack`)](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) ([microsoft/vscode#131427](https://github.com/microsoft/vscode/issues/131427))
+
+* [Marp for VS Code (`marp-team.marp-vscode`)](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) ([microsoft/vscode#132741](https://github.com/microsoft/vscode/issues/132741))
+
+* [Mathpix Markdown (`mathpix.vscode-mathpix-markdown`)](https://marketplace.visualstudio.com/items?itemName=mathpix.vscode-mathpix-markdown) ([#985][], [`mathpix-markdown-it`](https://www.npmjs.com/package/mathpix-markdown-it))
 
 ## Dependency on `vscode.markdown-language-features`
 
